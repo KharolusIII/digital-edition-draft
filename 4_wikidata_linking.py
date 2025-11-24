@@ -35,6 +35,13 @@ import requests
 
 # Reuse HTTP connections across calls
 SESSION = requests.Session()
+SESSION.headers.update(
+    {
+        "User-Agent": (
+            "digital-edition-draft/1.0 (+https://github.com/usuario/digital-edition-draft)"
+        )
+    }
+)
 
 # Cache search results in memory to avoid repeated Wikidata calls
 # key = (name, max_results, date_threshold, expected_category, strict)
@@ -254,6 +261,7 @@ def _batch_fetch_entities_meta(
             "format": "json",
             "props": "claims|aliases",
             "languages": language,
+            "maxlag": 5,
         }
         try:
             resp = SESSION.get(url, params=params, timeout=15)
@@ -462,14 +470,15 @@ def get_wikidata_details(
     date_threshold: int = DATE_THRESHOLD,
     expected_category: str | None = None,
     strict: bool = True,
-    base_sleep: float = 0.2,
-    error_sleep_min: float = 1.0,
-    error_sleep_max: float = 4.0,
-    max_retries: int = 3,
+    sleep_interval: float = 5.0,
+    error_sleep_min: float = 2.0,
+    error_sleep_max: float = 31.0,
+    max_retries: int = 5,
     json_dir: Path | None = None,
 ) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
     """
-    Optimized Wikidata search with caching, batched metadata retrieval and reduced sleeps.
+    Wikidata search that is friendlier to the API by respecting maxlag, slow cadence,
+    and Retry-After headers, while still using in-memory/on-disk caching.
     """
     name = (name or "").strip()
     if not name:
@@ -495,12 +504,12 @@ def get_wikidata_details(
         "search": name,
         "language": "en",
         "format": "json",
-        "limit": max_results * 5,
+        "limit": max_results,
+        "maxlag": 5,
         "type": "item",
     }
 
-    # Try to load cached JSON from disk first
-    data = None
+    data: Dict[str, Any] | None = None
     json_path: Path | None = None
     if json_dir is not None:
         json_dir.mkdir(parents=True, exist_ok=True)
@@ -534,8 +543,24 @@ def get_wikidata_details(
     for attempt in range(1, max_retries + 1):
         try:
             response = SESSION.get(search_url, params=params, timeout=15)
-            response.raise_for_status()
             data = response.json()
+            if isinstance(data, dict) and data.get("error", {}).get("code") == "maxlag":
+                retry_after = response.headers.get("Retry-After")
+                if retry_after is not None:
+                    try:
+                        sleep_time = max(float(retry_after), error_sleep_min)
+                    except ValueError:
+                        sleep_time = error_sleep_max
+                else:
+                    sleep_time = error_sleep_max
+                print(
+                    f"[WIKIDATA] maxlag for '{name}'. "
+                    f"Sleeping {sleep_time:.2f}s before retrying..."
+                )
+                time.sleep(sleep_time)
+                continue
+
+            response.raise_for_status()
 
             if json_path is not None:
                 try:
@@ -559,14 +584,35 @@ def get_wikidata_details(
                 f"[WIKIDATA] '{name}': {len(results_with_date)} with_date, "
                 f"{len(results_without_date)} without_date (strict={strict})"
             )
-            if base_sleep > 0:
-                time.sleep(base_sleep)
+            if sleep_interval > 0:
+                time.sleep(sleep_interval)
             return results_with_date, results_without_date
 
         except requests.RequestException as e:
             last_exception = e
-            if attempt < max_retries:
+            resp = getattr(e, "response", None)
+            status = getattr(resp, "status_code", None)
+
+            if status == 403:
+                print(
+                    f"[WIKIDATA] 403 Forbidden for '{name}'. "
+                    "Check the configured User-Agent / rate limits."
+                )
+                break
+
+            if status == 429 and resp is not None:
+                retry_after = resp.headers.get("Retry-After")
+                if retry_after is not None:
+                    try:
+                        sleep_time = max(float(retry_after), error_sleep_min)
+                    except ValueError:
+                        sleep_time = error_sleep_max
+                else:
+                    sleep_time = error_sleep_max
+            else:
                 sleep_time = random.uniform(error_sleep_min, error_sleep_max)
+
+            if attempt < max_retries:
                 print(
                     f"[WIKIDATA] Error for '{name}' ({e}). "
                     f"Retrying in {sleep_time:.2f}s (attempt {attempt}/{max_retries})..."
@@ -575,7 +621,7 @@ def get_wikidata_details(
             else:
                 print(
                     f"[WIKIDATA] Error for '{name}' after {max_retries} attempts. "
-                    f"Returning error placeholder."
+                    "Returning error placeholder."
                 )
 
     error_entry = {
