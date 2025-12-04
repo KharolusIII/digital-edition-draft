@@ -86,3 +86,10 @@ data_root/
 ### Dicas
 - Monitore a saida no terminal para checar alertas sobre dados faltando ou limites de API.
 - Mantenha os assets grandes fora do controle de versao e documente os passos de download quando compartilhar o projeto.
+
+
+## data_root_export
+- texts/: muestra de poemas y diccionario (puedes borrar lo que no quieras compartir)
+- tei_final/: TEI validados (standoff/flatten/combined) listos para exportar
+
+- pleiades/: CSVs completos de Pleiades para la exportación
