@@ -65,6 +65,7 @@ STATE_PATH = BASE_DIR / "soldevila" / "topic_matching_state.json"
 # Output CSVs
 RAW_MATCHES_CSV = BASE_DIR / "outputs" / "soldevila_matches_raw.csv"
 FILTERED_MATCHES_CSV = BASE_DIR / "outputs" / "soldevila_matches_filtered.csv"
+TOPICS_DIR = BASE_DIR / "topics"
 
 # Root folder with poems (.txt). You can point this to Propertius, Ovidius, etc.
 TEXT_ROOT = BASE_DIR / "texts" / "Propertius"
@@ -72,6 +73,14 @@ TEXT_ROOT = BASE_DIR / "texts" / "Propertius"
 # When falling back to files directly under BASE_DIR, use these prefixes to
 # identify which .txt files correspond to poems (sample data case).
 AUTHOR_PREFIXES = ("Catulo", "Tibulo", "Propercio")
+
+# Mapping of author prefixes to per-author topic CSV filenames
+AUTHOR_TOPIC_FILES: Dict[str, str] = {
+    "Catulo": "Catullus_matches_clean.csv",
+    "Tibulo": "Tibullus_matches_clean.csv",
+    "Propercio": "Propertius_matches_clean.csv",
+    "Ovidio": "Ovid_matches_clean.csv",
+}
 
 # Main Levenshtein threshold for "strong" matches
 MAIN_THRESHOLD = 1
@@ -332,6 +341,46 @@ def filter_longest_per_line_and_topic(
 
 
 # =========================
+# Split filtered matches by author
+# =========================
+
+def split_matches_by_author(
+    rows: List[Dict[str, Any]],
+    topics_dir: Path = TOPICS_DIR,
+    author_files: Dict[str, str] = AUTHOR_TOPIC_FILES,
+) -> None:
+    """
+    Write per-author CSVs expected by the TEI annotation step.
+
+    The author is inferred from the prefix of 'archivo_texto', e.g. "Catulo_",
+    "Tibulo_", "Propercio_", "Ovidio_". Only prefixes present in author_files
+    are considered.
+    """
+    if not rows:
+        return
+
+    topics_dir.mkdir(parents=True, exist_ok=True)
+    grouped: Dict[str, List[Dict[str, Any]]] = {prefix: [] for prefix in author_files}
+
+    for row in rows:
+        fname = str(row.get("archivo_texto", ""))
+        for prefix in author_files:
+            if fname.startswith(prefix):
+                grouped[prefix].append(row)
+                break
+
+    fieldnames = list(rows[0].keys())
+    for prefix, items in grouped.items():
+        out_path = topics_dir / author_files[prefix]
+        with out_path.open("w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            if items:
+                writer.writerows(items)
+        print(f"[TOPICS] Saved {len(items)} rows for '{prefix}' to {out_path}")
+
+
+# =========================
 # Saving results
 # =========================
 
@@ -579,6 +628,7 @@ def main():
             f"[FILTER] Filtered CSV saved to {FILTERED_MATCHES_CSV} "
             f"with {len(filtered)} rows."
         )
+        split_matches_by_author(filtered)
     else:
         print("[INFO] No results in this batch; nothing to filter.")
 
