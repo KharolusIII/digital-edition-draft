@@ -68,7 +68,8 @@ FILTERED_MATCHES_CSV = BASE_DIR / "outputs" / "soldevila_matches_filtered.csv"
 TOPICS_DIR = BASE_DIR / "topics"
 
 # Root folder with poems (.txt). You can point this to Propertius, Ovidius, etc.
-TEXT_ROOT = BASE_DIR / "texts" / "Propertius"
+# By default, process all author subfolders under BASE_DIR (e.g., Catulo/, Tibulo/, Propercio/)
+TEXT_ROOT = BASE_DIR
 
 # When falling back to files directly under BASE_DIR, use these prefixes to
 # identify which .txt files correspond to poems (sample data case).
