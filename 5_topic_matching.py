@@ -577,6 +577,16 @@ def main():
     text_root = TEXT_ROOT
     if text_root.exists():
         file_list = sorted(text_root.glob("**/*.txt"))
+        # If we are pointing to BASE_DIR, filter to author folders or prefixes to avoid picking up the dictionary file.
+        if text_root.resolve() == BASE_DIR.resolve():
+            file_list = [
+                p
+                for p in file_list
+                if (
+                    p.name.startswith(AUTHOR_PREFIXES)
+                    or p.parent.name in ("Catulo", "Tibulo", "Propercio")
+                )
+            ]
         print(f"[INFO] Found {len(file_list)} .txt files under {text_root}")
     else:
         fallback_files: list[Path] = []
@@ -591,18 +601,11 @@ def main():
     # 2) Load or build dictionary n-grams
     dictionary_path = DICTIONARY_TXT
     if not dictionary_path.exists():
-        alternative = BASE_DIR / "Soldevila8-Juguete.txt"
-        if alternative.exists():
-            print(
-                f"[INFO] Dictionary file '{dictionary_path}' not found. "
-                f"Using sample file: {alternative}"
-            )
-            dictionary_path = alternative
-        else:
-            raise FileNotFoundError(
-                f"Dictionary file not found: {dictionary_path} "
-                f"(also checked {alternative})"
-            )
+        raise FileNotFoundError(
+            f"Dictionary file not found: {dictionary_path}. "
+            "Download from http://rabida.uhu.es/dspace/handle/10272/14398 "
+            "and place it there (see README)."
+        )
 
     dictionary_fragments = load_or_tokenize_dictionary(
         dictionary_txt=dictionary_path,
