@@ -78,7 +78,7 @@ EDITIONS = {
         "url": "https://archive.org/details/tibullialiorumqu00tibuuoft",
     },
     "Propercio": {
-        "bibl_author": "Müller, L.",
+        "bibl_author": "Muller, L.",
         "date": "1898",
         "bibl_title": "Sex. Propertii Elegiae",
         "publisher": "Teubner",
@@ -86,13 +86,13 @@ EDITIONS = {
     },
 }
 
-# Editors and project name – you can anonymize these if needed
+# Editors and project name
 EDITORS = [
-    "Editor 1",
-    "Editor 2",
-    "Editor 3",
+    "Carlos Nusch",
+    "Gabriel Calarco",
+    "Gimena del Rio Riande",
 ]
-PROJECT_NAME = "Digital Latin Poetry Project"
+PROJECT_NAME = "Proyecto Aetatis Amoris"
 LICENSE_URL = "https://creativecommons.org/licenses/by/4.0/"
 LICENSE_LABEL = "CC BY 4.0"
 
@@ -157,7 +157,7 @@ def create_header(poem_title: str, folder_author: str, edition_details: dict) ->
         name_el = SubElement(resp_stmt, "name")
         name_el.text = ed
         resp_el = SubElement(resp_stmt, "resp")
-        resp_el.text = "Digital edition"
+        resp_el.text = "Edicion digital"
 
     # publicationStmt: publisher and license
     publication_stmt = SubElement(file_desc, "publicationStmt")
@@ -461,3 +461,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
