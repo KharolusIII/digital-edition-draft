@@ -575,6 +575,14 @@ def extract_entities_from_tei_file(file_path: Path) -> Optional[Dict[str, Any]]:
         return None
 
     root = tree.getroot()
+    use_ns = isinstance(root.tag, str) and root.tag.startswith("{http://www.tei-c.org/ns/1.0}")
+    ns = NS if use_ns else None
+
+    def q(tag_no_prefix: str) -> str:
+        if use_ns:
+            return f".//tei:{tag_no_prefix}"
+        return f".//{tag_no_prefix}"
+
     author = get_author_from_filename(file_path)
     poem = get_poem_title_from_tei(root, fallback=file_path.stem)
 
@@ -583,10 +591,10 @@ def extract_entities_from_tei_file(file_path: Path) -> Optional[Dict[str, Any]]:
     places: List[str] = []
 
     # All verse lines
-    lines = root.xpath(".//tei:text/tei:body//tei:l", namespaces=NS)
+    lines = root.xpath(q("text/tei:body//tei:l") if use_ns else q("text/body//l"), namespaces=ns)
     for l_el in lines:
         # Persons
-        for p_el in l_el.xpath(".//tei:persName", namespaces=NS):
+        for p_el in l_el.xpath(q("persName"), namespaces=ns):
             text = "".join(p_el.itertext()).strip()
             if not text:
                 continue
@@ -595,7 +603,7 @@ def extract_entities_from_tei_file(file_path: Path) -> Optional[Dict[str, Any]]:
             else:
                 people.append(text)
         # Places
-        for pl_el in l_el.xpath(".//tei:placeName", namespaces=NS):
+        for pl_el in l_el.xpath(q("placeName"), namespaces=ns):
             text = "".join(pl_el.itertext()).strip()
             if not text:
                 continue
@@ -700,9 +708,9 @@ def draw_entity_graph(
     print(f"[INFO] Original nodes: {len(G.nodes())}, edges: {len(G.edges())}")
 
     nodes = [n for n, d in G.nodes(data=True) if d.get("count", 0) >= node_threshold]
-    print(f"[DEBUG] Nodes with count ≥ {node_threshold}: {len(nodes)}")
+    print(f"[DEBUG] Nodes with count >= {node_threshold}: {len(nodes)}")
     if not nodes:
-        print(f"[WARN] No entities with count ≥ {node_threshold} for {author}")
+        print(f"[WARN] No entities with count >= {node_threshold} for {author}")
         return
 
     G_filtered = G.subgraph(nodes).copy()
@@ -711,9 +719,9 @@ def draw_entity_graph(
         for u, v, d in G_filtered.edges(data=True)
         if d.get("weight", 1) >= edge_threshold
     ]
-    print(f"[DEBUG] Edges with weight ≥ {edge_threshold}: {len(edges_to_draw)}")
+    print(f"[DEBUG] Edges with weight >= {edge_threshold}: {len(edges_to_draw)}")
     if not edges_to_draw:
-        print(f"[WARN] No edges with weight ≥ {edge_threshold} for {author}")
+        print(f"[WARN] No edges with weight >= {edge_threshold} for {author}")
 
     pos = nx.spring_layout(G_filtered, k=k, seed=42)
 
@@ -1010,3 +1018,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
