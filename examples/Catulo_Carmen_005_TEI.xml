@@ -1,0 +1,75 @@
+<?xml-model href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng"
+  schematypens="http://relaxng.org/ns/structure/1.0"
+  type="application/xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:id="carmen005">Carmen 005</title>
+        <author>Gaius Valerius Catullus</author>
+        <respStmt>
+          <name>Carlos Nusch</name>
+          <resp>Edicion digital</resp>
+        </respStmt>
+        <respStmt>
+          <name>Gabriel Calarco</name>
+          <resp>Edicion digital</resp>
+        </respStmt>
+        <respStmt>
+          <name>Gimena del Rio Riande</name>
+          <resp>Edicion digital</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Proyecto Aetatis Amoris</publisher>
+        <availability>
+          <licence>
+            <ref target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</ref>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <author>Merrill, E. T.</author>
+          <date>1893</date>
+          <title>Catullus; edited by Elmer Truesdell Merrill</title>
+          <publisher>Boston Ginn</publisher>
+          <ptr target="http://archive.org/details/catulluseditedby00catuuoft"/>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <appInfo>
+        <application version="3.8.0" ident="latincy_la_core_web_lg">
+          <label>la_core_web_lg v3.8.0</label>
+          <ptr target="https://huggingface.co/latincy/la_core_web_lg"/>
+        </application>
+      </appInfo>
+    </encodingDesc>
+  </teiHeader>
+  <standOff>
+    <spanGrp type="topics">
+      <span xml:id="INVITACIÓN_AL_DISFRUTE_VITAL" from="1" to="6" ana="#INVITACIÓN_AL_DISFRUTE_VITAL"/>
+      <span xml:id="BESOS" from="7" to="13" ana="#BESOS"/>
+      <span xml:id="AOJAMIENTO_DE_LOS_AMANTES" from="7" to="13" ana="#AOJAMIENTO_DE_LOS_AMANTES"/>
+      <span xml:id="ENVIDIA_HACIA_LOS_AMANTES" from="12" to="13" ana="#ENVIDIA_HACIA_LOS_AMANTES"/>
+    </spanGrp>
+  </standOff>
+  <text>
+    <body>
+      <l n="1" ana="#INVITACIÓN_AL_DISFRUTE_VITAL">Vivamus, mea <placeName>Lesbia</placeName>, atque amemus,</l>
+      <l n="2" ana="#INVITACIÓN_AL_DISFRUTE_VITAL">rumoresque senum severiorum</l>
+      <l n="3" ana="#INVITACIÓN_AL_DISFRUTE_VITAL">omnes unius aestimemus assis.</l>
+      <l n="4" ana="#INVITACIÓN_AL_DISFRUTE_VITAL">soles occidere et redire possunt:</l>
+      <l n="5" ana="#INVITACIÓN_AL_DISFRUTE_VITAL">nobis, cum semel occidit brevis lux,</l>
+      <l n="6" ana="#INVITACIÓN_AL_DISFRUTE_VITAL">nox est perpetua una dormienda.</l>
+      <l n="7" ana="#BESOS #AOJAMIENTO_DE_LOS_AMANTES">da mi basia mille, deinde centum,</l>
+      <l n="8" ana="#BESOS #AOJAMIENTO_DE_LOS_AMANTES">dein mille altera, dein secunda centum,</l>
+      <l n="9" ana="#BESOS #AOJAMIENTO_DE_LOS_AMANTES">deinde usque altera mille, deinde centum,</l>
+      <l n="10" ana="#BESOS #AOJAMIENTO_DE_LOS_AMANTES">dein, cum milia multa fecerimus,</l>
+      <l n="11" ana="#BESOS #AOJAMIENTO_DE_LOS_AMANTES">conturbabimus illa, ne sciamus,</l>
+      <l n="12" ana="#BESOS #AOJAMIENTO_DE_LOS_AMANTES #ENVIDIA_HACIA_LOS_AMANTES">aut ne quis malus invidere possit,</l>
+      <l n="13" ana="#BESOS #AOJAMIENTO_DE_LOS_AMANTES #ENVIDIA_HACIA_LOS_AMANTES">cum tantum sciat esse basiorum.</l>
+    </body>
+  </text>
+</TEI>
