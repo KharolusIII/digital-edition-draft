@@ -31,7 +31,7 @@ This repository runs a pipeline that transforms a small corpus of Latin poems in
 3) Final TEI are under `data_root/tei_pipeline/08_tei_header_with_relaxng/`.
 
 ### Soldevila dictionary
-- Reference: Moreno Soldevila, R. (2011). *Diccionario de motivos amatorios en la literatura latina*. Editorial Universidad de Huelva. http://rabida.uhu.es/dspace/handle/10272/14398
+- Reference: Moreno Soldevila, R. (2011). *Diccionario de motivos amatorios en la literatura latina*. Editorial Universidad de Huelva. http://hdl.handle.net/10272/14398
 - For space/time we ship only a tiny simulated sample; to run the full topic matcher, download the dictionary from the link and place it at `data_root/soldevila/Soldevila8.txt` (or adjust the path in `5_topic_matching.py`).
 
 ---
@@ -62,7 +62,7 @@ This repository runs a pipeline that transforms a small corpus of Latin poems in
 3) Revisa los TEI finales en `data_root/tei_pipeline/08_tei_header_with_relaxng/`.
 
 ### Diccionario de Soldevila
-- Referencia: Moreno Soldevila, R. (2011). *Diccionario de motivos amatorios en la literatura latina*. Editorial Universidad de Huelva. http://rabida.uhu.es/dspace/handle/10272/14398
+- Referencia: Moreno Soldevila, R. (2011). *Diccionario de motivos amatorios en la literatura latina*. Editorial Universidad de Huelva. http://hdl.handle.net/10272/14398
 - Por tiempo y espacio usamos una simulación mínima; para el matcher completo, descarga el diccionario y guárdalo en `data_root/soldevila/Soldevila8.txt` (o ajusta la ruta en `5_topic_matching.py`).
 
 ---
@@ -93,7 +93,7 @@ This repository runs a pipeline that transforms a small corpus of Latin poems in
 3) TEI finais em `data_root/tei_pipeline/08_tei_header_with_relaxng/`.
 
 ### Dicionário de Soldevila
-- Referência: Moreno Soldevila, R. (2011). *Diccionario de motivos amatorios en la literatura latina*. Editorial Universidad de Huelva. http://rabida.uhu.es/dspace/handle/10272/14398
+- Referência: Moreno Soldevila, R. (2011). *Diccionario de motivos amatorios en la literatura latina*. Editorial Universidad de Huelva. http://hdl.handle.net/10272/14398
 - Aqui usamos uma amostra simulada por limitação de tempo/tamanho; para o matcher completo, baixe o dicionário e coloque em `data_root/soldevila/Soldevila8.txt` (ou ajuste a rota em `5_topic_matching.py`).
 
 ---
