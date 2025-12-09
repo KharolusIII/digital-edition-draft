@@ -1,0 +1,93 @@
+fragmento_buscado,fragmento_encontrado,distancia,archivo_texto,numero_linea_texto,linea_texto,seccion_diccionario,topico,metodo,umbral_usado,pos_in_line
+vivamus mea lesbia atque,vivamus mea lesbia atque,0,Catulo_Carmen_005.txt,1,"Vivamus, mea Lesbia, atque amemus,",DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,ngrama,,0
+vivamus mea lesbia atque,vivamus mea lesbia atque,0,Catulo_Carmen_005.txt,1,"Vivamus, mea Lesbia, atque amemus,",DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,ngrama,1,0
+vivamus mea lesbia atque amemus,vivamus mea lesbia atque amemus,0,Catulo_Carmen_005.txt,1,"Vivamus, mea Lesbia, atque amemus,",DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,,0
+vivamus mea lesbia atque amemus,vivamus mea lesbia atque amemus,0,Catulo_Carmen_005.txt,1,"Vivamus, mea Lesbia, atque amemus,",DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,1,0
+rumoresque senum severiorum,rumoresque senum severiorum,0,Catulo_Carmen_005.txt,2,rumoresque senum severiorum,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,,0
+rumoresque senum severiorum,rumoresque senum severiorum,0,Catulo_Carmen_005.txt,2,rumoresque senum severiorum,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,1,0
+omnes unius aestimemus,omnes unius aestimemus,0,Catulo_Carmen_005.txt,3,omnes unius aestimemus assis.,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,ngrama,,0
+omnes unius aestimemus,omnes unius aestimemus,0,Catulo_Carmen_005.txt,3,omnes unius aestimemus assis.,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,ngrama,1,0
+omnes unius aestimemus assis,omnes unius aestimemus assis,0,Catulo_Carmen_005.txt,3,omnes unius aestimemus assis.,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,,0
+omnes unius aestimemus assis,omnes unius aestimemus assis,0,Catulo_Carmen_005.txt,3,omnes unius aestimemus assis.,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,1,0
+occidere et redire possunt,occidere et redire possunt,0,Catulo_Carmen_005.txt,4,soles occidere et redire possunt:,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,ngrama,,0
+occidere et redire possunt,occidere et redire possunt,0,Catulo_Carmen_005.txt,4,soles occidere et redire possunt:,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,ngrama,1,0
+soles occidere et redire possunt,soles occidere et redire possunt,0,Catulo_Carmen_005.txt,4,soles occidere et redire possunt:,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,,0
+soles occidere et redire possunt,soles occidere et redire possunt,0,Catulo_Carmen_005.txt,4,soles occidere et redire possunt:,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,1,0
+nobis cum semel occidit brevis,nobis cum semel occidit brevis,0,Catulo_Carmen_005.txt,5,"nobis, cum semel occidit brevis lux,",DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,ngrama,,0
+nobis cum semel occidit brevis,nobis cum semel occidit brevis,0,Catulo_Carmen_005.txt,5,"nobis, cum semel occidit brevis lux,",DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,ngrama,1,0
+nobis cum semel occidit brevis lux,nobis cum semel occidit brevis lux,0,Catulo_Carmen_005.txt,5,"nobis, cum semel occidit brevis lux,",DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,,0
+nobis cum semel occidit brevis lux,nobis cum semel occidit brevis lux,0,Catulo_Carmen_005.txt,5,"nobis, cum semel occidit brevis lux,",DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,1,0
+est perpetua una dormienda,est perpetua una dormienda,0,Catulo_Carmen_005.txt,6,nox est perpetua una dormienda.,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,ngrama,,0
+est perpetua una dormienda,est perpetua una dormienda,0,Catulo_Carmen_005.txt,6,nox est perpetua una dormienda.,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,ngrama,1,0
+nox est perpetua una dormienda,nox est perpetua una dormienda,0,Catulo_Carmen_005.txt,6,nox est perpetua una dormienda.,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,,0
+nox est perpetua una dormienda,nox est perpetua una dormienda,0,Catulo_Carmen_005.txt,6,nox est perpetua una dormienda.,DiccLine 1,INVITACIÓN AL DISFRUTE VITAL,texto_completo,1,0
+mi basia mille deinde centum,mi basia mille deinde centum,0,Catulo_Carmen_005.txt,7,"da mi basia mille, deinde centum,",DiccLine 3,BESOS,ngrama,,0
+mi basia mille deinde centum,mi basia mille deinde centum,0,Catulo_Carmen_005.txt,7,"da mi basia mille, deinde centum,",DiccLine 3,BESOS,ngrama,1,0
+da mi basia mille deinde centum,da mi basia mille deinde centum,0,Catulo_Carmen_005.txt,7,"da mi basia mille, deinde centum,",DiccLine 3,BESOS,texto_completo,,0
+da mi basia mille deinde centum,da mi basia mille deinde centum,0,Catulo_Carmen_005.txt,7,"da mi basia mille, deinde centum,",DiccLine 3,BESOS,texto_completo,1,0
+mi basia mille deinde centum,mi basia mille deinde centum,0,Catulo_Carmen_005.txt,7,"da mi basia mille, deinde centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,,0
+mi basia mille deinde centum,mi basia mille deinde centum,0,Catulo_Carmen_005.txt,7,"da mi basia mille, deinde centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,1,0
+da mi basia mille deinde centum,da mi basia mille deinde centum,0,Catulo_Carmen_005.txt,7,"da mi basia mille, deinde centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,,0
+da mi basia mille deinde centum,da mi basia mille deinde centum,0,Catulo_Carmen_005.txt,7,"da mi basia mille, deinde centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,1,0
+mille altera dein secunda centum,mille altera dein secunda centum,0,Catulo_Carmen_005.txt,8,"dein mille altera, dein secunda centum,",DiccLine 3,BESOS,ngrama,,0
+mille altera dein secunda centum,mille altera dein secunda centum,0,Catulo_Carmen_005.txt,8,"dein mille altera, dein secunda centum,",DiccLine 3,BESOS,ngrama,1,0
+dein mille altera dein secunda centum,dein mille altera dein secunda centum,0,Catulo_Carmen_005.txt,8,"dein mille altera, dein secunda centum,",DiccLine 3,BESOS,texto_completo,,0
+dein mille altera dein secunda centum,dein mille altera dein secunda centum,0,Catulo_Carmen_005.txt,8,"dein mille altera, dein secunda centum,",DiccLine 3,BESOS,texto_completo,1,0
+mille altera dein secunda centum,mille altera dein secunda centum,0,Catulo_Carmen_005.txt,8,"dein mille altera, dein secunda centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,,0
+mille altera dein secunda centum,mille altera dein secunda centum,0,Catulo_Carmen_005.txt,8,"dein mille altera, dein secunda centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,1,0
+dein mille altera dein secunda centum,dein mille altera dein secunda centum,0,Catulo_Carmen_005.txt,8,"dein mille altera, dein secunda centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,,0
+dein mille altera dein secunda centum,dein mille altera dein secunda centum,0,Catulo_Carmen_005.txt,8,"dein mille altera, dein secunda centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,1,0
+deinde usque altera mille deinde,deinde usque altera mille deinde,0,Catulo_Carmen_005.txt,9,"deinde usque altera mille, deinde centum,",DiccLine 3,BESOS,ngrama,,0
+deinde usque altera mille deinde,deinde usque altera mille deinde,0,Catulo_Carmen_005.txt,9,"deinde usque altera mille, deinde centum,",DiccLine 3,BESOS,ngrama,1,0
+deinde usque altera mille deinde centum,deinde usque altera mille deinde centum,0,Catulo_Carmen_005.txt,9,"deinde usque altera mille, deinde centum,",DiccLine 3,BESOS,texto_completo,,0
+deinde usque altera mille deinde centum,deinde usque altera mille deinde centum,0,Catulo_Carmen_005.txt,9,"deinde usque altera mille, deinde centum,",DiccLine 3,BESOS,texto_completo,1,0
+deinde usque altera mille deinde,deinde usque altera mille deinde,0,Catulo_Carmen_005.txt,9,"deinde usque altera mille, deinde centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,,0
+deinde usque altera mille deinde,deinde usque altera mille deinde,0,Catulo_Carmen_005.txt,9,"deinde usque altera mille, deinde centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,1,0
+deinde usque altera mille deinde centum,deinde usque altera mille deinde centum,0,Catulo_Carmen_005.txt,9,"deinde usque altera mille, deinde centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,,0
+deinde usque altera mille deinde centum,deinde usque altera mille deinde centum,0,Catulo_Carmen_005.txt,9,"deinde usque altera mille, deinde centum,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,1,0
+cum milia multa fecerimus,cum milia multa fecerimus,0,Catulo_Carmen_005.txt,10,"dein, cum milia multa fecerimus,",DiccLine 3,BESOS,ngrama,,0
+cum milia multa fecerimus,cum milia multa fecerimus,0,Catulo_Carmen_005.txt,10,"dein, cum milia multa fecerimus,",DiccLine 3,BESOS,ngrama,1,0
+dein cum milia multa fecerimus,dein cum milia multa fecerimus,0,Catulo_Carmen_005.txt,10,"dein, cum milia multa fecerimus,",DiccLine 3,BESOS,texto_completo,,0
+dein cum milia multa fecerimus,dein cum milia multa fecerimus,0,Catulo_Carmen_005.txt,10,"dein, cum milia multa fecerimus,",DiccLine 3,BESOS,texto_completo,1,0
+cum milia multa fecerimus,cum milia multa fecerimus,0,Catulo_Carmen_005.txt,10,"dein, cum milia multa fecerimus,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,,0
+cum milia multa fecerimus,cum milia multa fecerimus,0,Catulo_Carmen_005.txt,10,"dein, cum milia multa fecerimus,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,1,0
+dein cum milia multa fecerimus,dein cum milia multa fecerimus,0,Catulo_Carmen_005.txt,10,"dein, cum milia multa fecerimus,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,,0
+dein cum milia multa fecerimus,dein cum milia multa fecerimus,0,Catulo_Carmen_005.txt,10,"dein, cum milia multa fecerimus,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,1,0
+conturbabimus illa ne,conturbabimus illa ne,0,Catulo_Carmen_005.txt,11,"conturbabimus illa, ne sciamus,",DiccLine 3,BESOS,ngrama,,0
+conturbabimus illa ne,conturbabimus illa ne,0,Catulo_Carmen_005.txt,11,"conturbabimus illa, ne sciamus,",DiccLine 3,BESOS,ngrama,1,0
+conturbabimus illa ne sciamus,conturbabimus illa ne sciamus,0,Catulo_Carmen_005.txt,11,"conturbabimus illa, ne sciamus,",DiccLine 3,BESOS,texto_completo,,0
+conturbabimus illa ne sciamus,conturbabimus illa ne sciamus,0,Catulo_Carmen_005.txt,11,"conturbabimus illa, ne sciamus,",DiccLine 3,BESOS,texto_completo,1,0
+conturbabimus illa ne,conturbabimus illa ne,0,Catulo_Carmen_005.txt,11,"conturbabimus illa, ne sciamus,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,,0
+conturbabimus illa ne,conturbabimus illa ne,0,Catulo_Carmen_005.txt,11,"conturbabimus illa, ne sciamus,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,1,0
+conturbabimus illa ne sciamus,conturbabimus illa ne sciamus,0,Catulo_Carmen_005.txt,11,"conturbabimus illa, ne sciamus,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,,0
+conturbabimus illa ne sciamus,conturbabimus illa ne sciamus,0,Catulo_Carmen_005.txt,11,"conturbabimus illa, ne sciamus,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,1,0
+ne quis malus invidere possit,ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 3,BESOS,ngrama,,0
+ne quis malus invidere possit,ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 3,BESOS,ngrama,1,0
+aut ne quis malus invidere possit,aut ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 3,BESOS,texto_completo,,0
+aut ne quis malus invidere possit,aut ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 3,BESOS,texto_completo,1,0
+ne quis malus invidere possit,ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,,0
+ne quis malus invidere possit,ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,1,0
+aut ne quis malus invidere possit,aut ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,,0
+aut ne quis malus invidere possit,aut ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,1,0
+ne quis malus invidere possit,ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 7,ENVIDIA HACIA LOS AMANTES,ngrama,,0
+ne quis malus invidere possit,ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 7,ENVIDIA HACIA LOS AMANTES,ngrama,1,0
+aut ne quis malus invidere possit,aut ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 7,ENVIDIA HACIA LOS AMANTES,texto_completo,,0
+aut ne quis malus invidere possit,aut ne quis malus invidere possit,0,Catulo_Carmen_005.txt,12,"aut ne quis malus invidere possit,",DiccLine 7,ENVIDIA HACIA LOS AMANTES,texto_completo,1,0
+tantum sciat esse basiorum,tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 3,BESOS,ngrama,,0
+tantum sciat esse basiorum,tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 3,BESOS,ngrama,1,0
+cum tantum sciat esse basiorum,cum tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 3,BESOS,texto_completo,,0
+cum tantum sciat esse basiorum,cum tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 3,BESOS,texto_completo,1,0
+tantum sciat esse basiorum,tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,,0
+tantum sciat esse basiorum,tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,1,0
+tantum sciat esse basiorum in,tantum sciat esse basiorum,3,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 5,AOJAMIENTO DE LOS AMANTES,ngrama,3,0
+cum tantum sciat esse basiorum,cum tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,,0
+cum tantum sciat esse basiorum,cum tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,1,0
+cum tantum sciat esse basiorum in,cum tantum sciat esse basiorum,3,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 5,AOJAMIENTO DE LOS AMANTES,texto_completo,3,0
+tantum sciat esse basiorum,tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 7,ENVIDIA HACIA LOS AMANTES,ngrama,,0
+tantum sciat esse basiorum,tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 7,ENVIDIA HACIA LOS AMANTES,ngrama,1,0
+cum tantum sciat esse basiorum,cum tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 7,ENVIDIA HACIA LOS AMANTES,texto_completo,,0
+cum tantum sciat esse basiorum,cum tantum sciat esse basiorum,0,Catulo_Carmen_005.txt,13,cum tantum sciat esse basiorum.,DiccLine 7,ENVIDIA HACIA LOS AMANTES,texto_completo,1,0
+xolonia quae cupis ponte ludere longo,colonia quae cupis ponte ludere longo,1,Catulo_Carmen_017.txt,1,"O Colonia, quae cupis ponte ludere longo,",DiccLine 7,ENVIDIA HACIA LOS AMANTES,ngrama,,0
+xolonia quae cupis ponte ludere longo,colonia quae cupis ponte ludere longo,1,Catulo_Carmen_017.txt,1,"O Colonia, quae cupis ponte ludere longo,",DiccLine 7,ENVIDIA HACIA LOS AMANTES,ngrama,1,0
+o xolonia quae cupis ponte ludere longo,o colonia quae cupis ponte ludere longo,1,Catulo_Carmen_017.txt,1,"O Colonia, quae cupis ponte ludere longo,",DiccLine 7,ENVIDIA HACIA LOS AMANTES,texto_completo,,0
+o xolonia quae cupis ponte ludere longo,o colonia quae cupis ponte ludere longo,1,Catulo_Carmen_017.txt,1,"O Colonia, quae cupis ponte ludere longo,",DiccLine 7,ENVIDIA HACIA LOS AMANTES,texto_completo,1,0

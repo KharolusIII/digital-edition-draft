@@ -1,0 +1,60 @@
+<?xml-model href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng"
+  schematypens="http://relaxng.org/ns/structure/1.0"
+  type="application/xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:id="liber3carmen15">Liber 3 Carmen 15</title>
+        <author>Publilius Tibullus</author>
+        <respStmt>
+          <name>Carlos Nusch</name>
+          <resp>Edicion digital</resp>
+        </respStmt>
+        <respStmt>
+          <name>Gabriel Calarco</name>
+          <resp>Edicion digital</resp>
+        </respStmt>
+        <respStmt>
+          <name>Gimena del Rio Riande</name>
+          <resp>Edicion digital</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Proyecto Aetatis Amoris</publisher>
+        <availability>
+          <licence>
+            <ref target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</ref>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <author>Postgate, J. P.</author>
+          <date>1915</date>
+          <title>Tibulli aliorumque carminum libri tres. Scriptorum classicorum bibliotheca Oxoniensis</title>
+          <publisher>Scriptorum classicorum bibliotheca Oxoniensis</publisher>
+          <ptr target="https://archive.org/details/tibullialiorumqu00tibuuoft"/>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <appInfo>
+        <application version="3.8.0" ident="latincy_la_core_web_lg">
+          <label>la_core_web_lg v3.8.0</label>
+          <ptr target="https://huggingface.co/latincy/la_core_web_lg"/>
+        </application>
+      </appInfo>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <lg type="poema">
+        <l n="1">Scis iter ex animo sublatum triste puellae?</l>
+        <l n="2"><persName>Natali</persName> <placeName>Romae</placeName> iam licet esse tuo.</l>
+        <l n="3">Omnibus ille dies nobis natalis agatur,</l>
+        <l n="4">qui nec opinanti nunc tibi forte uenit.</l>
+      </lg>
+    </body>
+  </text>
+</TEI>

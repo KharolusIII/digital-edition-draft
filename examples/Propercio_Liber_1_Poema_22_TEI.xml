@@ -1,0 +1,66 @@
+<?xml-model href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng"
+  schematypens="http://relaxng.org/ns/structure/1.0"
+  type="application/xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:id="liber1poema22">Liber 1 Poema 22</title>
+        <author>Sextus Propertius</author>
+        <respStmt>
+          <name>Carlos Nusch</name>
+          <resp>Edicion digital</resp>
+        </respStmt>
+        <respStmt>
+          <name>Gabriel Calarco</name>
+          <resp>Edicion digital</resp>
+        </respStmt>
+        <respStmt>
+          <name>Gimena del Rio Riande</name>
+          <resp>Edicion digital</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Proyecto Aetatis Amoris</publisher>
+        <availability>
+          <licence>
+            <ref target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</ref>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <author>Muller, L.</author>
+          <date>1898</date>
+          <title>Sex. Propertii Elegiae</title>
+          <publisher>Teubner</publisher>
+          <ptr target="https://archive.org/details/elegiaerecensuit00propuoft"/>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <appInfo>
+        <application version="3.8.0" ident="latincy_la_core_web_lg">
+          <label>la_core_web_lg v3.8.0</label>
+          <ptr target="https://huggingface.co/latincy/la_core_web_lg"/>
+        </application>
+      </appInfo>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <lg type="poema">
+        <l n="1">Qualis et unde genus, qui sint mihi, <persName>Tulle</persName>, <persName type="group">Penates</persName>,</l>
+        <l n="2">quaeris pro nostra semper amicitia.</l>
+        <l n="3">si Perusina tibi patriae sunt nota sepulcra,</l>
+        <l n="4"><placeName>Italiae</placeName> duris funera temporibus,</l>
+        <l n="5">cum <persName type="group">Romana</persName> suos egit discordia cives—</l>
+        <l n="6">sic mihi praecipue, pulvis <placeName>Etrusca</placeName>, dolor,</l>
+        <l n="7">tu proiecta mei perpessa's membra propinqui,</l>
+        <l n="8">tu nullo miseri contegis ossa solo—</l>
+        <l n="9">proxima suppositos contingens <placeName>Umbria</placeName> campos</l>
+        <l n="10">me genuit terris fertilis uberibus.</l>
+      </lg>
+    </body>
+  </text>
+</TEI>
