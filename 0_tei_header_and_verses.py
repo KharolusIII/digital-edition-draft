@@ -194,6 +194,28 @@ def create_header(poem_title: str, folder_author: str, edition_details: dict) ->
     encoding_desc = SubElement(header, "encodingDesc")
     app_info = SubElement(encoding_desc, "appInfo")
 
+    # ------------------------------------
+    # Topic taxonomy declaration (Soldevila)
+    # ------------------------------------
+
+    class_decl = SubElement(encoding_desc, "classDecl")
+    taxonomy = SubElement(class_decl, "taxonomy")
+    taxonomy.set("xml:id", "soldevila")
+
+    bibl = SubElement(taxonomy, "bibl")
+
+    bibl_author = SubElement(bibl, "author")
+    bibl_author.text = "Moreno Soldevila, R. (Ed.)"
+
+    bibl_date = SubElement(bibl, "date")
+    bibl_date.text = "2011"
+
+    bibl_title = SubElement(bibl, "title")
+    bibl_title.text = "Diccionario de motivos amatorios en la Literatura Latina"
+
+    bibl_publisher = SubElement(bibl, "publisher")
+    bibl_publisher.text = "Universidad de Huelva"
+
     # TEI order: version first, then ident (no slashes)
     application = SubElement(
         app_info,

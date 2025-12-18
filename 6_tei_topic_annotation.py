@@ -269,6 +269,49 @@ def assign_line_ids(root: ET._Element) -> None:
             l_node.set(f"{{{XML_NS}}}id", f"line{n_str}")
 
 
+def ensure_soldevila_categories(
+    root: ET._Element,
+    topics: Iterable[str],
+) -> None:
+    """
+    Ensure that <category> elements for detected topics
+    exist inside <taxonomy xml:id="soldevila">.
+    """
+    use_ns = has_tei_namespace(root)
+
+    # Locate taxonomy
+    taxonomy = root.find(
+        ".//" + qualify("taxonomy", use_ns) + "[@xml:id='soldevila']",
+        namespaces={"xml": XML_NS},
+    )
+
+    if taxonomy is None:
+        # If taxonomy is missing, we do nothing (header should define it)
+        print("[WARN] Taxonomy 'soldevila' not found in teiHeader.")
+        return
+
+    # Collect existing category IDs
+    existing_ids = set()
+    for cat in taxonomy.findall(qualify("category", use_ns)):
+        xml_id = cat.get(f"{{{XML_NS}}}id")
+        if xml_id:
+            existing_ids.add(xml_id)
+
+    # Add missing categories
+    for topic in sorted(topics):
+        topic_norm = normalize_topic(topic)
+        if topic_norm in existing_ids:
+            continue
+
+        category = ET.Element(qualify("category", use_ns))
+        category.set(f"{{{XML_NS}}}id", topic_norm)
+
+        cat_desc = ET.SubElement(category, qualify("catDesc", use_ns))
+        cat_desc.text = topic
+
+        taxonomy.append(category)
+
+
 # =========================
 # 3) FLATTEN annotations (@ana on <l>)
 # =========================
@@ -337,11 +380,12 @@ def build_standoff_block(
 
     for topic, ranges in topic_ranges.items():
         topic_norm = normalize_topic(topic)
+        span_base_id = f"span-{topic_norm}"
         for i, (start_ln, end_ln) in enumerate(ranges, start=1):
             if len(ranges) == 1:
-                xml_id = topic_norm
+                xml_id = span_base_id
             else:
-                xml_id = f"{topic_norm}-{i}"
+                xml_id = f"{span_base_id}-{i}"
             span_el = ET.Element(qualify("span", use_ns))
             span_el.set(f"{{{XML_NS}}}id", xml_id)
             span_el.set("from", str(start_ln))
@@ -403,6 +447,9 @@ def annotate_tei_files(
         parser = ET.XMLParser(remove_blank_text=True)
         tree = ET.parse(str(tei_input_path), parser)
         root = tree.getroot()
+
+        # Ensure topic categories exist in the Soldevila taxonomy
+        ensure_soldevila_categories(root, topic_ranges.keys())
 
         # For combined mode, we also flatten <lg> groups into <l> siblings.
         if mode == "combined":
